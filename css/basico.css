@@ -1,0 +1,20 @@
+
+span.resaltado{
+	font-weight:bold;	
+}
+
+input.boton_enviar{
+	font-weight:bold;	
+	min-height:40px;
+	background-color:#CCFFCC;
+	margin: 5px;
+}
+
+
+#txt_importe, #txt_motivo{
+	margin: 5px;
+}
+
+#txt_fecha, #txt_hora{
+	margin: 5px 1px;
+}
