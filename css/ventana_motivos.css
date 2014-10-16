@@ -1,0 +1,8 @@
+div#lista_motivos{
+	position:absolute;
+	top:5px;
+	background-color:#EEEEFF;
+	border-style:solid;
+	border-width:3px;
+	border-color:#000000;
+}
