@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Autenticaci&oacute;n de usuario</title>
+
+<style type="text/css">
+
+span.etiqueta{
+	float:left;
+	min-width:150px;
+	color:blue;
+}
+input.campo_form{
+	color:red;
+}
+
+div.oculto{
+	display:none;	
+}
+</style>
+
+<script type="text/javascript" src="js/utf8_encode.js"></script>
+<script type="text/javascript" src="js/sha1.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+</head>
+
+<body>
+
+<div id="principal">
+
+<h1>Autenticaci&oacute;n de usuario</h1>
+
+
+<br />
+<span class="etiqueta">* Usuario:</span><input class="campo_form" type="text" id="txt_usuario" />
+<br />
+<span class="etiqueta">* Contrase&ntilde;a:</span><input class="campo_form" type="password" id="txt_password" />
+<br />
+<span id="span_activa_cambia_pass"><a href="javascript:cambia_password();">Cambia contraseña...</a></span>
+
+<span style="margin-left:50px" id="span_activa_creacion"><a href="javascript:activa_creacion();">Nuevo usuario...</a><br /></span>
+
+<div id="div_ocultable1" class="oculto">
+<span class="etiqueta">* Nueva contrase&ntilde;a:</span><input class="campo_form" type="password" id="txt_password2" value="" />
+<br />
+<span class="etiqueta">* Confirma contrase&ntilde;a:</span><input class="campo_form" type="password" id="txt_password3" value="" />
+</div>
+
+<div id="div_ocultable2" class="oculto">
+<span class="etiqueta">* Confirma contrase&ntilde;a:</span><input class="campo_form" type="password" id="txt_password4" value="" />
+<br />
+<span class="etiqueta">* e-mail:</span><input class="campo_form" type="text" id="txt_email" />
+<br />
+<span class="etiqueta">Nombre:</span><input class="campo_form" type="text" id="txt_nombre" />
+
+</div>
+
+<br />
+<span class="etiqueta">Conserva la contrase&ntilde;a</span><input class="campo_form" type="checkbox" id="chkGuardaPassword" checked="true" />
+
+<input style="margin-left:50px" type="button" class="boton_enviar" id="btn_enviar" value="   Enviar   " onclick="javascript:gestionaUsuario('');" />
+
+<br />
+* Campos obligatorios
+
+<br /><br />
+<a href="listado.html">Lista apuntes</a>
+<a style="margin-left:50px" href="index.html">nuevo apunte</a>
+
+<br />
+<img src="images/intelectual2.png" />
+
+</div> <!-- principal -->
+<div id="debug">
+</div>
+<link rel="stylesheet" type="text/css" href="css/basico.css" />
+</body>
+</html>
