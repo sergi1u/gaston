@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html manifest="manifest.gaston_index.php" lang="es">
+<head>
+<title>Apunte de gasto en gast&oacute;n</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="css/basico.css" />
+<link rel="stylesheet" type="text/css" href="css/ventana_motivos.css" />
+
+<script type="text/javascript" src="js/funcionesAuxiliares.js"></script>
+<script type="text/javascript" src="js/main_gaston.js"></script>
+
+<script type="text/javascript" src="js/utf8_encode.js"></script>
+<script type="text/javascript" src="js/sha1.js"></script>
+<script type="text/javascript" src="js/comunes_gaston.js"></script>
+<script type="text/javascript" src="js/motivos_gaston.js"></script>
+<script type="text/javascript" src="js/ventana.js"></script>
+</head>
+
+<body>
+
+<section id="principal">
+
+<h1>Gast&oacute;n</h1>
+Usuario: <span id="span_usuario" class="resaltado">---</span>
+<br />
+<span id="span_tipo_apunte" class="resaltado">Nuevo apunte</span>
+
+<form name="frm_pb" id="formulario">
+
+<a href="login.html">C&aacute;mbia usuario</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="listado.html">Lista apuntes</a>
+<br />
+
+<input type="hidden" id="txt_id" value="" />
+<label for="txt_importe">Euros</label>
+<input type="number" id="txt_importe" value="" />
+<br/>
+<label for="txt_motivo">Motivo</label>
+<input type="text" id="txt_motivo" size="15" value="" />
+<br />
+<select name="selMotivo" id="selectMotivos">
+<option>motivo....</option>
+</select>
+<input type="button" id="btnMotivos" value="gest. motivos" />
+<p>
+<label>
+Fecha:</label> 
+<input type="text" size="10" maxlength="10" id="txt_fecha" placeholder="DD/MM/YYYY" />
+<input type="text" size="5" maxlength="5" id="txt_hora" placeholder="hh:mm" />
+<input type="button" id="btnAhora" value="Ahora" />
+
+</p>
+
+<input type="button" class="boton_enviar" id="btnGrabaApunte" value="Graba apunte" />
+
+<br />
+
+Datos geogr&aacute;ficos:
+&nbsp;&nbsp;&nbsp;
+<input type="checkbox" id="chkIgnoraGeo" /> Ignorar
+<br />
+Latitud: <span class="resaltado" id="span_latitude">?</span>
+ Longitud: <span class="resaltado" id="span_longitude">?</span>
+<br />
+Precisi&oacute;n: <span class="resaltado" id="span_accuracy">?</span> m.
+ medido: <span class="resaltado" id="span_antiguedad">?</span>
+<br />
+<input type="button" id="btnRefrescaGeo" value="Refresca Geo." />
+&nbsp;&nbsp;&nbsp;
+<input type="button" id="btnGeoManual" value="Geo. Manual" />
+<br />
+<input type="button" id="btnReenvia" value="Reenvia pendientes." />
+</form>
+</section>
+
+<br/>
+<section id="info">
+Ajax: <span class="resaltado" id="span_ajax">?</span>
+ LocalStorage: <span class="resaltado" id="span_localStorage">?</span>
+ GeoLoc.: <span class="resaltado" id="span_geo_disponible">?</span>
+<br/>
+Env&iacute;os pendientes:
+<span id="txt_envios_pendientes"></span>
+</section>
+
+<section id="status" class="resaltado">
+log...
+</section>
+</body>
+</html>
